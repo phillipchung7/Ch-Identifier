@@ -3,9 +3,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 public class file_reader {
-	
+	private String alphaEntity;
+	private String description;
+
 	public file_reader(String hex) throws Exception {
-		
 		String lines = "";
 		String[] info = null;
 		ArrayList<String> myArray = new ArrayList<String>();
@@ -23,13 +24,16 @@ public class file_reader {
 				  break;
 			  }
 		}
-		
 		info = myArray.get(index).split(",\\s\\s");
-		String alphaEntity = info[3].trim();
-		String description = info[4].trim();
-		System.out.println(alphaEntity);
-		System.out.println(description);
-		
+		alphaEntity = info[3].trim();
+		description = info[4].trim();
+	}
+	
+	public String getAlphaEntity() {
+		return alphaEntity;
+	}
+	public String getDescription() {
+		return description;
 	}
 }	
 		

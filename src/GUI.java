@@ -3,13 +3,6 @@ import javax.swing.*;
 import java.awt.event.*; // needed for event handling
  
 public  class GUI extends JPanel implements ActionListener {
-	int decimal;
-	String decimalEntity;
-	String hexstring;
-	String hex_with_padded_zeroes;
-	public static String hex;
-	String hexEntity;
-	String unicode;
 	
 	JButton button = new JButton("Get Character Info"); // make button object
 	JTextField textField = new JTextField();
@@ -42,13 +35,13 @@ public GUI() {
      if (e.getSource() == button) {
     	 String characterInput = textField.getText();	// Obtain the input in the text field as a string.
     	 char firstCharacter = characterInput.charAt(0);
-    	 decimal = firstCharacter;
-    	 decimalEntity = " &#38#"+decimal;
-    	 hexstring = Integer.toHexString(decimal);
-    	 hex_with_padded_zeroes = ("0000" + hexstring).substring(hexstring.length());
-    	 hex = "0x"+ hex_with_padded_zeroes;
-    	 hexEntity = "&#38#x"+ hex_with_padded_zeroes;
-    	 unicode = "\\u"+ hex_with_padded_zeroes;
+    	 int decimal = firstCharacter;
+    	 String decimalEntity = " &#38#"+decimal;
+    	 String hexstring = Integer.toHexString(decimal);
+    	 String hex_with_padded_zeroes = ("0000" + hexstring).substring(hexstring.length());
+    	 String hex = "0x"+ hex_with_padded_zeroes;
+    	 String hexEntity = "&#38#x"+ hex_with_padded_zeroes;
+    	 String unicode = "\\u"+ hex_with_padded_zeroes;
 
     	 System.out.println(hex);
     	 

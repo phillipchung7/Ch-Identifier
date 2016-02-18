@@ -12,7 +12,10 @@ public class Identifier_Main
 		
 		GUI panel = new GUI();
 		frame.add(panel);
-		new file_reader("0x5e");
+		file_reader info = new file_reader("0x2dd");
+		
+		System.out.println(info.getAlphaEntity());
+		System.out.println(info.getDescription());
 	}
 
 }
