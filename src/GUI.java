@@ -10,7 +10,7 @@ public class GUI {
 	JButton button = new JButton("Get Info"); 
 	JLabel output = new JLabel ("");
 	
-	public CopyPasteArea() {
+	public GUI() {
 		GUI();
 	}
 	
@@ -28,7 +28,7 @@ public void GUI() {
 	panel.add(output);
 
 	frame.add(panel);
-	
+	frame.setSize(250, 230);
 	
 	button.addActionListener(new ActionListener () { //When the button is clicked...
 		public void actionPerformed (ActionEvent e) {
