@@ -28,6 +28,7 @@ public class file_reader {     //creates and the necessary strings and ints for 
 		if (index != -1) {
 			alphaEntity = myArray.get(index+2);    
 			description = myArray.get(index+3);
+			description = description.substring(1, description.lastIndexOf('"')); //Cut's off the quotation marks.
 		}
 		else {
 			alphaEntity = "Not found in CSV";
