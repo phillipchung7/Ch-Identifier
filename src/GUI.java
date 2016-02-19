@@ -25,7 +25,7 @@ public  class GUI extends JPanel {  //makes class
 	JTextField hexEntityDisplay = new JTextField();
 	JLabel alphaEntityLabel = new JLabel("Alpha Entity:");
 	JTextField alphaEntityDisplay = new JTextField();
-	JLabel javaLabel = new JLabel("UTF-8:");
+	JLabel javaLabel = new JLabel("Java Representation:");
 	JTextField javaDisplay = new JTextField();
 
 
