@@ -24,6 +24,8 @@ public  class GUI extends JPanel implements ActionListener {
 	JTextField alphaEntityDisplay = new JTextField();
 	JLabel javaLabel = new JLabel("Java Character:");
 	JTextField javaDisplay = new JTextField();
+	JLabel descriptionLabel = new JLabel("Character Description: ");
+	JTextField descriptionDisplay = new JTextField();
 
 public GUI() {
 	
@@ -74,6 +76,11 @@ public GUI() {
 	infoPanel.add(javaDisplay);
 	javaDisplay.setPreferredSize(new Dimension(125, 25));
 	javaDisplay.setEditable(false);  // prevents the user from editing it.
+	infoPanel.add(descriptionLabel);
+	descriptionLabel.setHorizontalAlignment(JLabel.RIGHT);
+	infoPanel.add(descriptionDisplay);
+	descriptionDisplay.setPreferredSize(new Dimension(125,25));
+	descriptionDisplay.setEditable(false);
 }
  
    public void actionPerformed(ActionEvent e) { 
