@@ -2,21 +2,21 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*; // needed for event handling
  
-public  class GUI extends JPanel {
+public  class GUI extends JPanel {  //makes class
 	
-	public String hex;
-	JPanel topPanel = new JPanel();
+	public String hex;     //creates the string hex
+	JPanel topPanel = new JPanel();     //creates the panel above in the frame the user sees
 	JButton button = new JButton("Get Character Info"); // make button object
-	JTextField textField = new JTextField();
+	JTextField textField = new JTextField();  //creates the text field
 	
-	JPanel middlePanel = new JPanel();
-	JTextField characterDisplay = new JTextField();
-	JLabel descriptionLabel = new JLabel("Character Description: ");
-	JLabel descriptionText = new JLabel("");
+	JPanel middlePanel = new JPanel();    //creates the other panel that the user sees within the frame
+	JTextField characterDisplay = new JTextField();  //creates text field for the character
+	JLabel descriptionLabel = new JLabel("Character Description: ");  //creates label for character description
+	JLabel descriptionText = new JLabel("");    //creates description text
 
-	JPanel infoPanel = new JPanel(new GridLayout(0,4));
-	JLabel decimalLabel = new JLabel("Decimal:");
-	JTextField decimalDisplay = new JTextField();
+	JPanel infoPanel = new JPanel(new GridLayout(0,4));    //makes the panel and cleans it up nicely like a grid
+	JLabel decimalLabel = new JLabel("Decimal:");    //creates label and text field for all the values that we need to show the user
+	JTextField decimalDisplay = new JTextField();  
 	JLabel decimalEntityLabel = new JLabel("Decimal Entity:");
 	JTextField decimalEntityDisplay = new JTextField();
 	JLabel hexLabel = new JLabel("Hex:");
@@ -29,7 +29,7 @@ public  class GUI extends JPanel {
 	JTextField javaDisplay = new JTextField();
 
 
-public GUI() {
+public GUI() {   //creates the GUI, its dimensions, and adds panels and buttons to it
 	
     this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 	this.add(topPanel);
@@ -53,7 +53,7 @@ public GUI() {
 	box1.add(descriptionText);
 	this.add(new JSeparator(SwingConstants.HORIZONTAL));
 	
-	this.add(infoPanel);
+	this.add(infoPanel);        //adds all the labels and text fields in the frame
 	infoPanel.add(decimalLabel);
 	decimalLabel.setHorizontalAlignment(JLabel.RIGHT);
 	infoPanel.add(decimalDisplay);
@@ -88,8 +88,8 @@ public GUI() {
 			    	 String decimalEntity = "&#"+decimal;
 			    	 String hexstring = Integer.toHexString(decimal);
 			    	 hex = "0x"+ hexstring;
-			    	 String hex_with_padded_zeroes = ("0000" + hexstring).substring(hexstring.length());
-			    	 String hex_with_padded_zeroes_with_0x = "0x" + hex_with_padded_zeroes;
+			    	 String hex_with_padded_zeroes = ("0000" + hexstring).substring(hexstring.length());   //puts in strings for different values required
+			    	 String hex_with_padded_zeroes_with_0x = "0x" + hex_with_padded_zeroes;  //padded zeroes makes sure that there are always 4 digits after the x.
 			    	 String hexEntity = "&#x"+ hex_with_padded_zeroes;
 			    	 String javaCode = "\\u"+ hex_with_padded_zeroes;
 			    	 characterDisplay.setText(Character.toString(firstCharacter));
@@ -101,7 +101,7 @@ public GUI() {
 			    	 javaDisplay.setText(javaCode);
 			 		try
 					{
-						file_reader info = new file_reader(hex);
+						file_reader info = new file_reader(hex);    //transfers the data for the alpha entity and the description of the character from file_reader
 				    	alphaEntityDisplay.setText(info.getAlphaEntity());
 				    	descriptionText.setText(info.getDescription());
 					}
