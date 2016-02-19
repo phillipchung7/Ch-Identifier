@@ -6,7 +6,7 @@ public class Identifier_Main
 	{
 		JFrame frame = new JFrame();
 		frame.setVisible(true); 
-		frame.setSize(650,550); 
+		frame.setSize(400,550); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		frame.setTitle("Character Identifier");
 		
