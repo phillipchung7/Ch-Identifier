@@ -27,8 +27,7 @@ public  class GUI extends JPanel {
 	JTextField alphaEntityDisplay = new JTextField();
 	JLabel javaLabel = new JLabel("UTF-8:");
 	JTextField javaDisplay = new JTextField();
-	JLabel descriptionLabel = new JLabel("Character Description: ");
-	JTextField descriptionDisplay = new JTextField();
+
 
 public GUI() {
 	
@@ -79,7 +78,6 @@ public GUI() {
 	javaLabel.setHorizontalAlignment(JLabel.RIGHT);
 	infoPanel.add(javaDisplay);
 	javaDisplay.setEditable(false);  // prevents the user from editing it.
-<<<<<<< HEAD
 	
 	button.addActionListener(new ActionListener () { //When the button is clicked...
 		   public void actionPerformed(ActionEvent e) { 
@@ -106,8 +104,6 @@ public GUI() {
 						file_reader info = new file_reader(hex);
 				    	alphaEntityDisplay.setText(info.getAlphaEntity());
 				    	descriptionText.setText(info.getDescription());
-						System.out.println(info.getAlphaEntity());
-						System.out.println(info.getDescription());
 					}
 					catch (Exception e1)
 					{
@@ -116,28 +112,8 @@ public GUI() {
 				    	alphaEntityDisplay.setText("None");
 				    	descriptionText.setText("None");
 					}
-			 		
-					System.out.println(hex);
-=======
-	infoPanel.add(descriptionLabel);
-	descriptionLabel.setHorizontalAlignment(JLabel.RIGHT);
-	infoPanel.add(descriptionDisplay);
-	descriptionDisplay.setPreferredSize(new Dimension(125,25));
-	descriptionDisplay.setEditable(false);
-}
- 
-   public void actionPerformed(ActionEvent e) { 
-     if (e.getSource() == button) {
-    	 String characterInput = textField.getText();	// Obtain the input in the text field as a string.		
-    	 char firstCharacter = characterInput.charAt(0);
-    	 int decimal = firstCharacter;
-    	 String decimalEntity = "&#"+decimal;
-    	 
-    	 characterDisplay.setText(Character.toString(firstCharacter));
->>>>>>> origin/Phillip's-branch
-
-			 	}
-		   }
+			     }
+			 	}		   
 		});
 	}
  }
