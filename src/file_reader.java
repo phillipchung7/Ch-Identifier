@@ -24,7 +24,7 @@ public class file_reader {
 		for (String items : info) {
 			myArray.add(items.trim());
 		}
-		index = myArray.lastIndexOf(hex);
+		index = myArray.indexOf(hex);
 		if (index != -1) {
 			alphaEntity = myArray.get(index+2);
 			description = myArray.get(index+3);
